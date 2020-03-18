@@ -1,2 +1,2 @@
-# MemBrain-Tests
-MemBrain remote API test using Java / C / C++
+# MemBrain-Remote
+My tests of MemBrain-nn remote scripting and Java/C/C++ DLL connect
