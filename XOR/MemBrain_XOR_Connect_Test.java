@@ -64,22 +64,22 @@ public class MemBrain_XOR_Connect_Test {
 		System.out.println();
 		//-----------------------------------------------------------
 		// Load training data *.mdl
-		String file_lesson = (path + "XOR\\XOR.mbl");
+		/*String file_lesson = (path + "XOR\\XOR.mbl");
 		MBDllWrapper.MBLoadLesson(file_lesson); 
 		if ( MBDllWrapper.GetLastError()==0 ) {
 			System.out.println("SUCCESS: <" + file_lesson + "> loaded");
 		} else {
 			System.out.println("ERROR: loading <" + file_lesson + ">");
-		}
+		}*/
 		
 		// Export to csv files (full / raw)
-		String file_lesson_csv = (path + "XOR_full.csv");
+		/*String file_lesson_csv = (path + "XOR_full.csv");
 		MBDllWrapper.MBExportLesson(file_lesson_csv, 0);
 		if ( MBDllWrapper.GetLastError()==0 ) {
 			System.out.println("SUCCESS: <" + file_lesson_csv + "> full exported");
 		} else {
 			System.out.println("ERROR: full exporting <" + file_lesson_csv + ">");
-		}
+		}*/
 		/*file_lesson_csv = (path + "XOR_raw.csv");
 		MBDllWrapper.MBExportLessonRaw(file_lesson_csv, 0);
 		if ( MBDllWrapper.GetLastError()==0 ) {
@@ -89,7 +89,9 @@ public class MemBrain_XOR_Connect_Test {
 		}*/
 
 		// Try to load exported raw csv lesson
-		file_lesson_csv = (path + "XOR_raw.csv");
+		String file_lesson_csv = (path + "XOR_raw.csv");
+		MBDllWrapper.MBSetLessonInputCount(input_nn);	// set input count
+		MBDllWrapper.MBSetLessonOutputCount(output_nn);	// set output count
 		MBDllWrapper.MBImportLessonRaw(file_lesson_csv);
 		if ( MBDllWrapper.GetLastError()==0 ) {
 			System.out.println("SUCCESS: <" + file_lesson_csv + "> raw loaded");
