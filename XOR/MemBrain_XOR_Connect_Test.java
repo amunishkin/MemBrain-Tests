@@ -22,13 +22,13 @@ public class MemBrain_XOR_Connect_Test {
 		System.out.println(version);
 		
 		// Set path to Neural Net files
-		String path = "C:\\Users\\munis\\Desktop\\git_projects\\MemBrain-Remote\\_ANNs\\"; 
+		String path = "C:\\Users\\munis\\Documents\\_code\\MemBrain-Tests\\_ANNs\\"; 
 		
 		
 		System.out.println();
 		//-----------------------------------------------------------
-		// Load Neural Net *.mdl file
-		String file_nn = (path + "XOR.mbn");
+		// Load Neural Net *.mdn file
+		String file_nn = (path + "XOR\\XOR.mbn");
 		MBDllWrapper.MBLoadNet(file_nn);
 		if ( MBDllWrapper.GetLastError()==0 ) {
 			System.out.println("SUCCESS: net <" + file_nn + "> loaded");
@@ -64,7 +64,7 @@ public class MemBrain_XOR_Connect_Test {
 		System.out.println();
 		//-----------------------------------------------------------
 		// Load training data *.mdl
-		String file_lesson = (path + "XOR.mbl");
+		String file_lesson = (path + "XOR\\XOR.mbl");
 		MBDllWrapper.MBLoadLesson(file_lesson); 
 		if ( MBDllWrapper.GetLastError()==0 ) {
 			System.out.println("SUCCESS: <" + file_lesson + "> loaded");

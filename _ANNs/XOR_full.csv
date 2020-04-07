@@ -1,0 +1,42 @@
+MemBrain Dll V09.02.00.00(64 Bit) (Jan 15 2020)
+Sectioned CSV File
+
+[<LESSON START>]
+
+[<INFO HEADER>]
+This file represents a MemBrain Lesson.
+
+[<LESSON NAME>]
+New Lesson
+
+[<LESSON COMMENT>]
+---
+
+[<INPUTS>]
+In 1,In 2
+
+[<OUTPUTS>]
+Out
+
+[<PATTERN FORMAT INFO>]
+In 1,In 2,Out
+
+[<PATTERNS>]
+0,0,0
+0,1,1
+1,0,1
+1,1,0
+
+[<PATTERN NAMES>]
+New Pattern
+New Pattern
+New Pattern
+New Pattern
+
+[<PATTERN COMMENTS>]
+---
+---
+---
+---
+
+[<END>]
