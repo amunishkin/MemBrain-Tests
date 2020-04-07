@@ -80,12 +80,21 @@ public class MemBrain_XOR_Connect_Test {
 		} else {
 			System.out.println("ERROR: full exporting <" + file_lesson_csv + ">");
 		}
-		file_lesson_csv = (path + "XOR_raw.csv");
+		/*file_lesson_csv = (path + "XOR_raw.csv");
 		MBDllWrapper.MBExportLessonRaw(file_lesson_csv, 0);
 		if ( MBDllWrapper.GetLastError()==0 ) {
 			System.out.println("SUCCESS: <" + file_lesson_csv + "> raw exported");
 		} else {
 			System.out.println("ERROR: raw exporting <" + file_lesson_csv + ">");
+		}*/
+
+		// Try to load exported raw csv lesson
+		file_lesson_csv = (path + "XOR_raw.csv");
+		MBDllWrapper.MBImportLessonRaw(file_lesson_csv);
+		if ( MBDllWrapper.GetLastError()==0 ) {
+			System.out.println("SUCCESS: <" + file_lesson_csv + "> raw loaded");
+		} else {
+			System.out.println("ERROR: loading raw <" + file_lesson_csv + ">");
 		}
 		
 		// Simple print tests to check if correct lesson
